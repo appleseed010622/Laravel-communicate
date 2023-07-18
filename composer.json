@@ -1,0 +1,69 @@
+{
+    "name": "vimeo/laravel",
+    "description": "A Vimeo bridge for Laravel",
+    "license": "Apache-2.0",
+    "keywords": [
+        "laravel",
+        "vimeo",
+        "video"
+    ],
+    "authors": [
+        {
+            "name": "Jon Ursenbach",
+            "email": "jonu@vimeo.com"
+        },
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com",
+            "homepage": "https://vinkla.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "graham-campbell/manager": "^5.0",
+        "vimeo/vimeo-api": "^3.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "graham-campbell/analyzer": "^2.0|^3.1",
+        "graham-campbell/testbench": "^5.2",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.0|^9.5.10",
+        "psalm/plugin-laravel": "^1.4.0|^1.1|^2.7",
+        "laravel/lumen-framework": "^5.7",
+        "vimeo/psalm": "^3.17|^4.19|^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vimeo\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vimeo\\Tests\\Laravel\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vimeo\\Laravel\\VimeoServiceProvider"
+            ],
+            "aliases": {
+                "Vimeo": "Vimeo\\Laravel\\Facades\\Vimeo"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "phpunit": "phpunit",
+        "tests": [
+            "composer phpunit"
+        ]
+    }
+}
